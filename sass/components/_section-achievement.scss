@@ -25,13 +25,13 @@
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    flex-basis: calc(100% / 2 -var(--gap-h));
+    flex-basis: calc(100% / 2 - var(--gap-h));
     margin-left: var(--gap-v);
     margin-top: var(--gap-h);
   }
 
   @media screen and (min-width: 1200px) {
-    flex-basis: calc(100% / 3 -var(--gap-h));
+    flex-basis: calc(100% / 4 - var(--gap-h));
     margin-left: var(--gap-v);
     margin-top: var(--gap-h);
   }
@@ -52,6 +52,10 @@
   text-transform: uppercase;
   color: var(--color-h-second);
   margin-bottom: 10px;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
 }
 
 .achievement__text {
