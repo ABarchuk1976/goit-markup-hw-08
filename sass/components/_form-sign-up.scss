@@ -1,29 +1,48 @@
 .sign-up {
   color: var(--color-cta-footer);
+}
 
-  &__cta {
-    @extend %footer-cta;
+.sign-up__cta {
+  @extend %footer-cta;
+}
+
+.sign-up__form {
+  @media screen and (max-width: 1199px) {
+    @include positioning-flex($jc: start);
+    flex-direction: column;
   }
 
-  &__form {
-    @include positioning-flex($jc: left);
+  @media screen and (min-width: 1200px) {
+    @include positioning-flex($jc: start);
+  }
+}
+
+.sign-up__input {
+  @include positioning-flex($jc: start);
+  width: 450px;
+  height: 50px;
+  padding: 0;
+  padding-left: 16px;
+
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--color-input-footer);
+
+  background-color: transparent;
+  border: 1px solid var(--color-board-input-footer);
+  border-radius: var(--radius-board-primary);
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
   }
 
-  &__input {
-    @include positioning-flex($jc: left);
-    min-width: 358px;
-    height: 50px;
-    padding: 0;
-    padding-left: 16px;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
     margin-right: 12px;
-
-    font-size: 16px;
-    line-height: 1.25;
-    color: var(--color-input-footer);
-
-    background-color: transparent;
-    border: 1px solid var(--color-board-input-footer);
-    border-radius: var(--radius-board-primary);
   }
 }
 

@@ -99,8 +99,7 @@
 
 .form__checkbox-label {
   position: relative;
-  display: flex;
-  align-items: center;
+  @include positioning-flex($jc: start);
   margin-bottom: 30px;
   padding-left: 24px;
 

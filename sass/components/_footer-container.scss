@@ -1,12 +1,49 @@
 .footer__container {
-  display: flex;
-  align-items: baseline;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    @include positioning-flex($jc: start, $ai: baseline);
+    text-align: left;
+  }
+}
+
+.container_align {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @include positioning-flex($ai: baseline);
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 768px) and (min-width: 1200px) {
+    @include positioning-flex($ai: baseline);
+  }
+}
+
+.container__info {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 0;
+    max-width: var(--width-card-768);
+    margin-right: var(--gap-v);
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
 }
 
 .container__social {
-  margin-left: 70px;
+  margin-bottom: 60px;
+  @media screen and (min-width: 768px) and (max-width: 1190px) {
+    margin-bottom: 0;
+    max-width: var(--width-card-768);
+    margin-right: var(--gap-v);
+  }
 }
 
 .container__sign-up {
-  margin-left: auto;
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+  }
 }

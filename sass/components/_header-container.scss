@@ -1,5 +1,5 @@
 .header__container {
-  @include positioning-flex($jc: left, $ai: stretch);
+  @include positioning-flex($jc: start, $ai: stretch);
 }
 
 .container__logo {

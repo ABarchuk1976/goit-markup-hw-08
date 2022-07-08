@@ -67,9 +67,11 @@
   --margin-menu-item: 50px;
 
   --padding-container: 15px;
-  --padding-hero: 200px;
+  --padding-hero-under-1200: 118px;
+  --padding-hero-1200: 200px;
   --padding-modal: 40px;
-  --padding-section: 94px;
+  --padding-section-under-1200: 60px;
+  --padding-section-1200: 94px;
 
   --radius-board-primary: 4px;
 
@@ -83,7 +85,10 @@
 
   --timing-primary: cubic-bezier(0.4, 0, 0.2, 1);
 
-  --width-container: 1200px;
+  --width-card-768: 354px;
+  --width-container-480: 480px;
+  --width-container-768: 768px;
+  --width-container-1200: 1200px;
   --width-page: 1600px;
   --width-form-modal: 448px;
 }
