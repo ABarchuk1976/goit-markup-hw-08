@@ -1,3 +1,9 @@
+.department {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
 .department__title {
   @extend %title;
 }
