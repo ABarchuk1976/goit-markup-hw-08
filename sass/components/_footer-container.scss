@@ -23,6 +23,7 @@
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 354px;
     margin-bottom: 0;
     max-width: var(--width-card-768);
     margin-right: var(--gap-v);
@@ -36,6 +37,7 @@
 .container__social {
   margin-bottom: 60px;
   @media screen and (min-width: 768px) and (max-width: 1190px) {
+    width: 354px;
     margin-bottom: 0;
     max-width: var(--width-card-768);
     margin-right: var(--gap-v);
