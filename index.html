@@ -474,22 +474,23 @@
                 placeholder="Введите текст"
               ></textarea>
             </div>
-            <label class="form__checkbox-label">
+
+            <label class="form__checkbox-label" for="checkbox-policy">
+              Соглашаюсь с рассылкой и принимаю&nbsp;
+              <a class="form__checkbox-link" href="#">Условия договора</a>
               <input
                 class="checkbox visually-hidden"
                 type="checkbox"
                 name="user-agreement"
+                id="checkbox-policy"
                 required
               />
-              Соглашаюсь с рассылкой и принимаю&nbsp;
-              <a class="form__checkbox-link" href="#">Условия договора</a>
-              <svg class="form__icon-unchecked">
-                <use href="./images/icons.svg#icon-check"></use>
-              </svg>
-              <svg class="form__icon-checked">
-                <use href="./images/icons.svg#icon-checked"></use>
+              <svg class="form__custom-checkbox" width="16" height="15">
+                <use class="form__icon-unchecked" href="./images/icons.svg#icon-check"></use>
+                <use class="form__icon-checked" href="./images/icons.svg#icon-checked"></use>
               </svg>
             </label>
+
             <button class="form-submit-btn" type="submit">Отправить</button>
           </form>
         </div>
