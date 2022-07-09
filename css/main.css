@@ -1103,16 +1103,37 @@ address {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: calc(-1 * var(--gap-h));
-  margin-top: calc(-1 * var(--gap-v));
+  margin-left: -30px;
+  margin-top: -30px;
   text-align: left;
 }
 
 .portfolio__card {
-  -ms-flex-preferred-size: calc(100% / 3 - var(--gap-h));
-      flex-basis: calc(100% / 3 - var(--gap-h));
   margin-left: var(--gap-h);
   margin-top: var(--gap-v);
+  -ms-flex-preferred-size: calc(100vw - 30px);
+      flex-basis: calc(100vw - 30px);
+}
+
+@media screen and (min-width: 480px) {
+  .portfolio__card {
+    -ms-flex-preferred-size: var(--width-container-480)-30px;
+        flex-basis: var(--width-container-480)-30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__card {
+    -ms-flex-preferred-size: calc(100% / 2 - 30px);
+        flex-basis: calc(100% / 2 - 30px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio__card {
+    -ms-flex-preferred-size: calc(100% / 3 - 30px);
+        flex-basis: calc(100% / 3 - 30px);
+  }
 }
 
 .portfolio__card-link {
@@ -1133,6 +1154,10 @@ address {
 .potfolio__image-thumb {
   position: relative;
   overflow: hidden;
+}
+
+.portfolio-img {
+  width: 100%;
 }
 
 .portfolio__thumb-overlay {

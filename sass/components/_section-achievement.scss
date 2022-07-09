@@ -7,8 +7,8 @@
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -30px;
-    margin-top: -30px;
+    margin-left: #{$minusIndent};
+    margin-top: #{$minusIndent};
   }
 }
 
