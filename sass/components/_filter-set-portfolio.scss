@@ -3,12 +3,35 @@
   justify-content: center;
 
   &--append {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
+  }
+
+  @media screen and (max-width: 767px) {
+    justify-content: start;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 768px) {
+    &--append {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &--append {
+      margin-bottom: 50px;
+    }
   }
 }
 
-.portfolio__filter:not(:last-child) {
-  margin-right: 8px;
+.portfolio__filter {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 15px;
+  }
 }
 
 .portfolio__button {
