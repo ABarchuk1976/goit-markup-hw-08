@@ -14,7 +14,8 @@ li {
   padding: 0;
 }
 
-img {
+img,
+svg {
   display: block;
   max-width: 100%;
   height: auto;
@@ -27,6 +28,15 @@ a {
 
 address {
   font-style: normal;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 *:focus-visible {
