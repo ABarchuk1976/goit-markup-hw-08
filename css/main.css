@@ -64,6 +64,7 @@
   --gap-h: 30px;
   --gap-v: 30px;
   --margin-menu-item: 50px;
+  --margin-contact-item: 30px;
   --padding-container: 15px;
   --padding-hero-under-1200: 118px;
   --padding-hero-1200: 200px;
@@ -360,28 +361,12 @@ button {
   margin-right: auto;
   background-color: var(--bg-header);
   border-bottom: 1px solid var(--color-board-header);
-  padding-top: 16px;
-  padding-bottom: 16px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .header {
     padding-top: 16px;
     padding-bottom: 16px;
-  }
-}
-
-@media screen and (min-width: 480px) {
-  .header {
-    padding-top: 21px;
-    padding-bottom: 21px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .header {
-    padding-top: 24px;
-    padding-bottom: 24px;
   }
 }
 
@@ -482,6 +467,7 @@ button {
         -ms-flex-align: center;
             align-items: center;
     text-align: left;
+    height: 100%;
   }
 }
 
@@ -600,7 +586,6 @@ button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 100%;
   }
 }
 
@@ -611,9 +596,8 @@ button {
 }
 
 @media screen and (min-width: 768px) {
-  .navigation__item {
-    height: 100%;
-    margin-right: var(--margin-menu-item);
+  .navigation__item + .navigation__item {
+    margin-left: var(--margin-menu-item);
   }
 }
 
@@ -653,7 +637,7 @@ button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 100%;
+    padding: 32px 0;
   }
 }
 
@@ -661,7 +645,7 @@ button {
   .navigation__link--current::after {
     position: absolute;
     left: 0;
-    bottom: -25px;
+    bottom: -1px;
     content: '';
     background-color: var(--color-accent);
     border-radius: 2px;
@@ -696,9 +680,9 @@ button {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -729,7 +713,7 @@ button {
 
 @media screen and (min-width: 1200px) {
   .contact__item + .contact__item {
-    margin-left: var(--margin-menu-item);
+    margin-left: var(--margin-contact-item);
     height: 100%;
   }
 }

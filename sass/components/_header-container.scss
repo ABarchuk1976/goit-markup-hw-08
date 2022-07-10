@@ -64,6 +64,7 @@
   @media screen and (min-width: 768px) {
     @include positioning-flex($jc: start);
     text-align: left;
+    height: 100%;
   }
 
   @media screen and (max-width: 767px) {
