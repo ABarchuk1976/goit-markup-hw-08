@@ -4,7 +4,7 @@
   }
 
   @media screen and (min-width: 768px) {
-    @include positioning-flex($jc: start, $ai: stretch);
+    @include positioning-flex($jc: start);
   }
 }
 
@@ -78,7 +78,6 @@
     left: 0;
     width: calc(100vw);
     z-index: 1;
-    pointer-events: none;
 
     @include positioning-flex(flex, start, flex-start);
     flex-direction: column;
