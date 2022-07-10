@@ -6,3 +6,8 @@ body {
   letter-spacing: var(--letter-spacing-primary);
   line-height: var(--line-height-primary);
 }
+
+.body-fixed {
+  position: fixed;
+  width: 100%;
+}

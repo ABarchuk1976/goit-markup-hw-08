@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
-  <body>
+  <body class="" body>
     <header class="header">
       <div class="container header__container">
         <a href="#" class="logo container__logo" lang="en">
@@ -26,19 +26,19 @@
         </a>
 
         <button
-          class="menu_button"
+          class="menu__button"
           type="button"
           aria-expanded="false"
           aria-controls="menu-container"
           data-menu-button
         >
-          <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-            <use class="icon-close" href="./images/icons.svg#icon-menu-close"></use>
-            <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
+          <svg aria-label="Переключатель мобильного меню">
+            <use class="menu__icon-close" href="./images/icons.svg#icon-menu-close"></use>
+            <use class="menu__icon-menu" href="./images/icons.svg#icon-menu"></use>
           </svg>
         </button>
 
-        <div class="menu-container" id="menu-container" data-menu>
+        <div class="menu__container" id="menu-container" data-menu>
           <nav class="navigation">
             <ul class="navigation__list">
               <li class="navigation__item">
@@ -50,7 +50,7 @@
               </li>
 
               <li class="navigation__item">
-                <a href="" class="navigation__link">Контакты</a>
+                <a href="#" class="navigation__link">Контакты</a>
               </li>
             </ul>
           </nav>

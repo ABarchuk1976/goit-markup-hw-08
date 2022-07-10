@@ -19,6 +19,7 @@
   --color-h-third: #212121;
   --color-icon-client: #afb1b8;
   --color-icon-company: #afb1b8;
+  --color-icon-menu-mobile: #212121;
   --color-icon-modal: #212121;
   --color-icon-social-staff: #afb1b8;
   --color-icon-social-staff-hover: #ffffff;
@@ -47,6 +48,7 @@
   --bg-header: #ffffff;
   --bg-hero: #c4c4c4;
   --bg-link-social-staff: transparent;
+  --bg-menu-mobile: #ffffff;
   --bg-modal: #ffffff;
   --bg-overlay-card-portfolio: rgba(33, 150, 243, 0.9);
   --bg-page: #ffffff;
@@ -69,6 +71,7 @@
   --padding-container: 15px;
   --padding-hero-under-1200: 118px;
   --padding-hero-1200: 200px;
+  --padding-menu-mobile: 48px 40px;
   --padding-modal: 40px;
   --padding-section-under-1200: 60px;
   --padding-section-1200: 94px;
@@ -82,6 +85,8 @@
     0px 2px 2px rgba(0, 0, 0, 0.12);
   --shadow-modal: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  --shadow-menu-mobile: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
 
   --timing-primary: cubic-bezier(0.4, 0, 0.2, 1);
 

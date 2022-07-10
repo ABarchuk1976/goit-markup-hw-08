@@ -1,21 +1,26 @@
 .navigation__list {
-  @include positioning-flex($jc: start);
-  height: 100%;
+  @media screen and (min-width: 768px) {
+    @include positioning-flex($jc: start);
+    height: 100%;
+  }
 }
 
 .navigation__item {
-  height: 100%;
-  @extend %header-menu-indent;
-
   &:last-child {
-    @extend %header-menu-indent-last;
+    margin-bottom: 32px;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 100%;
+    margin-right: var(--margin-menu-item);
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
 .navigation__link {
-  position: relative;
-  @include positioning-flex($jc: start);
-  height: 100%;
   text-decoration: none;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -26,19 +31,30 @@
     color: var(--color-accent);
   }
 
-  &--current::after {
-    position: absolute;
-    left: 0;
-    bottom: -25px;
-    content: '';
-    background-color: var(--color-accent);
-    border-radius: 2px;
-    height: 4px;
-    width: 100%;
-  }
-
   &:hover,
   &:focus {
     color: var(--color-accent);
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 40px;
+    line-height: 1.175;
+  }
+
+  @media screen and (min-width: 768px) {
+    position: relative;
+    @include positioning-flex($jc: start);
+    height: 100%;
+
+    &--current::after {
+      position: absolute;
+      left: 0;
+      bottom: -25px;
+      content: '';
+      background-color: var(--color-accent);
+      border-radius: 2px;
+      height: 4px;
+      width: 100%;
+    }
   }
 }

@@ -1,20 +1,95 @@
 .header__container {
-  position: relative;
-  @include positioning-flex($jc: start, $ai: stretch);
+  @media screen and (max-width: 767px) {
+    position: relative;
+  }
+
+  @media screen and (min-width: 768px) {
+    @include positioning-flex($jc: start, $ai: stretch);
+  }
 }
 
-.menu-button {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  padding: 0;
-  margin: 0;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
+.menu__button {
+  display: none;
+  z-index: 2;
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    padding: 0;
+    margin: 0;
+    border: none;
+    @include positioning-flex();
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    color: var(--color-icon-menu-mobile);
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--color-accent);
+  }
+}
+
+.menu__icon-close {
+  display: block;
+  width: 19px;
+  height: 19px;
+  opacity: 0;
+  fill: currentColor;
+  transition: opacity var(--duration-primary) var(--timing-primary);
+
+  .menu__button.is-open & {
+    opacity: 1;
+  }
+}
+
+.menu__icon-menu {
+  display: block;
+  width: 24px;
+  height: 16px;
+  opacity: 1;
+  fill: currentColor;
+  transition: opacity var(--duration-primary) var(--timing-primary);
+
+  .menu__button.is-open & {
+    opacity: 0;
+  }
+}
+
+.menu__container {
+  @media screen and (min-width: 768px) {
+    @include positioning-flex($jc: start);
+    text-align: left;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.menu__container.is-open {
+  @media screen and (max-width: 767px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100vw);
+    z-index: 1;
+    pointer-events: none;
+
+    @include positioning-flex(flex, start, flex-start);
+    flex-direction: column;
+    background-color: var(--bg-menu-mobile);
+    box-shadow: var(--shadow-menu-mobile);
+    padding: var(--padding-menu-mobile);
+  }
+  @media screen and (min-width: 768px) {
+    @include positioning-flex($jc: start);
+    text-align: left;
+  }
 }
 
 .container__logo {
@@ -22,5 +97,14 @@
 }
 
 .container__contact {
-  margin-left: auto;
+  @media screen and (max-width: 767px) {
+    margin-top: 306px;
+    margin-bottom: 64px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-left: 84px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 305px;
+  }
 }
