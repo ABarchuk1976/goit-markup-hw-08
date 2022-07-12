@@ -1420,8 +1420,31 @@ button {
 }
 
 .staff__img {
-  width: 100%;
   height: auto;
+}
+
+@media screen and (max-width: 479px) {
+  .staff__img {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .staff__img {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .staff__img {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .staff__img {
+    width: 270px;
+  }
 }
 
 .staff__description {

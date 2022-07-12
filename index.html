@@ -215,11 +215,36 @@
           <ul class="staff__card-set">
             <li class="staff__card">
               <div class="staff__thumb">
-                <img
-                  class="staff__img"
-                  src="./images/main-our-team-person-1.jpg"
-                  alt="Игорь Демьяненко"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/designer-270.webp   270w,
+                      ./images/designer-406.webp   406w,
+                      ./images/designer-450.webp   450w,
+                      ./images/designer-540.webp   540w,
+                      ./images/designer-676.webp   676w,
+                      ./images/designer-810.webp   810w,
+                      ./images/designer-900.webp   900w,
+                      ./images/designer-1350.webp 1350w
+                    "
+                    type="image/webp"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/designer-270.jpeg   270w,
+                      ./images/designer-406.jpeg   406w,
+                      ./images/designer-450.jpeg   450w,
+                      ./images/designer-540.jpeg   540w,
+                      ./images/designer-676.jpeg   676w,
+                      ./images/designer-810.jpeg   810w,
+                      ./images/designer-900.jpeg   900w,
+                      ./images/designer-1350.jpeg 1350w
+                    "
+                    type="image/jpeg"
+                  />
+                  <img class="staff__img" src="./images/designer-450.jpeg" alt="Игорь Демьяненко" />
+                </picture>
               </div>
               <div class="staff__description">
                 <h3 class="staff__name">Игорь Демьяненко</h3>
