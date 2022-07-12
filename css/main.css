@@ -837,6 +837,33 @@ button {
 
 /* main */
 .hero__section {
+  height: auto;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-img.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-img.jpg");
+  background-position: center;
+  background-size: cover;
+  background-color: var(--bg-hero);
+  color: var(--color-title-hero);
+  text-align: center;
+  padding-top: var(--padding-hero-under-1200);
+  padding-bottom: var(--padding-hero-under-1200);
+}
+
+@media screen and (max-width: 767px) {
+  .hero__section {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-480.jpeg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-480.jpeg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__section {
+    padding-top: var(--padding-hero-1200);
+    padding-bottom: var(--padding-hero-1200);
+  }
+}
+
+.hero__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -850,23 +877,6 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: auto;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-img.jpg");
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-img.jpg");
-  background-position: center;
-  background-size: cover;
-  background-color: var(--bg-hero);
-  color: var(--color-title-hero);
-  text-align: center;
-  padding-top: var(--padding-hero-under-1200);
-  padding-bottom: var(--padding-hero-under-1200);
-}
-
-@media screen and (min-width: 1200px) {
-  .hero__section {
-    padding-top: var(--padding-hero-1200);
-    padding-bottom: var(--padding-hero-1200);
-  }
 }
 
 .hero__title {

@@ -1,6 +1,4 @@
 .hero__section {
-  @include positioning-flex($jc: start);
-  flex-direction: column;
   height: auto;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/hero-img.jpg');
@@ -13,10 +11,20 @@
   padding-top: var(--padding-hero-under-1200);
   padding-bottom: var(--padding-hero-under-1200);
 
+  @media screen and (max-width: 767px) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/hero-480.jpeg');
+  }
+
   @media screen and (min-width: 1200px) {
     padding-top: var(--padding-hero-1200);
     padding-bottom: var(--padding-hero-1200);
   }
+}
+
+.hero__container {
+  @include positioning-flex($jc: start);
+  flex-direction: column;
 }
 
 .hero__title {
