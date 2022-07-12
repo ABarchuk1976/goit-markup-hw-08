@@ -215,36 +215,18 @@
           <ul class="staff__card-set">
             <li class="staff__card">
               <div class="staff__thumb">
-                <picture>
-                  <source
-                    srcset="
-                      ./images/designer-270.webp   270w,
-                      ./images/designer-406.webp   406w,
-                      ./images/designer-450.webp   450w,
-                      ./images/designer-540.webp   540w,
-                      ./images/designer-676.webp   676w,
-                      ./images/designer-810.webp   810w,
-                      ./images/designer-900.webp   900w,
-                      ./images/designer-1350.webp 1350w
-                    "
-                    type="image/webp"
-                  />
-
-                  <source
-                    srcset="
-                      ./images/designer-270.jpeg   270w,
-                      ./images/designer-406.jpeg   406w,
-                      ./images/designer-450.jpeg   450w,
-                      ./images/designer-540.jpeg   540w,
-                      ./images/designer-676.jpeg   676w,
-                      ./images/designer-810.jpeg   810w,
-                      ./images/designer-900.jpeg   900w,
-                      ./images/designer-1350.jpeg 1350w
-                    "
-                    type="image/jpeg"
-                  />
-                  <img class="staff__img" src="./images/designer-450.jpeg" alt="Игорь Демьяненко" />
-                </picture>
+                <img
+                  class="staff__img"
+                  srcset="
+                    ./images/designer-450.jpeg   450w,
+                    ./images/designer-676.jpeg   676w,
+                    ./images/designer-900.jpeg   900w,
+                    ./images/designer-1350.jpeg 1350w
+                  "
+                  sizes="(max-width: 767px) 450px, (max-width: 1199px) 354px, 270px"
+                  src="./images/designer-450.jpeg"
+                  alt="Игорь Демьяненко"
+                />
               </div>
               <div class="staff__description">
                 <h3 class="staff__name">Игорь Демьяненко</h3>
@@ -286,7 +268,14 @@
               <div class="staff__thumb"></div>
               <img
                 class="staff__img"
-                src="./images/main-our-team-person-2.jpg"
+                srcset="
+                  ./images/developer-450.jpeg   450w,
+                  ./images/developer-676.jpeg   676w,
+                  ./images/developer-900.jpeg   900w,
+                  ./images/developer-1350.jpeg 1350w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
+                src="./images/developer-450.jpeg"
                 alt="Ольга Репина"
               />
               <div class="staff__description">
@@ -329,7 +318,14 @@
               <div class="staff__thumb">
                 <img
                   class="staff__img"
-                  src="./images/main-our-team-person-3.jpg"
+                  srcset="
+                    ./images/marketolog-450.jpeg   450w,
+                    ./images/marketolog-676.jpeg   676w,
+                    ./images/marketolog-900.jpeg   900w,
+                    ./images/marketolog-1350.jpeg 1350w
+                  "
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
+                  src="./images/marketolog-450.jpeg"
                   alt="Николай Тарасов"
                 />
               </div>
@@ -373,7 +369,14 @@
               <div class="staff__thumb"></div>
               <img
                 class="staff__img"
-                src="./images/main-our-team-person-4.jpg"
+                srcset="
+                  ./images/uidesigner-450.jpeg   450w,
+                  ./images/uidesigner-676.jpeg   676w,
+                  ./images/uidesigner-900.jpeg   900w,
+                  ./images/uidesigner-1350.jpeg 1350w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
+                src="./images/uidesigner-450.jpeg"
                 alt="Михаил Ермаков"
               />
               <div class="staff__description">

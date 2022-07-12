@@ -1419,32 +1419,34 @@ button {
   }
 }
 
-.staff__img {
-  height: auto;
-}
-
 @media screen and (max-width: 479px) {
-  .staff__img {
-    max-width: 100%;
+  .staff__thumb {
+    width: 100%;
   }
 }
 
 @media screen and (min-width: 480px) {
-  .staff__img {
+  .staff__thumb {
     width: 450px;
   }
 }
 
-@media screen and (min-width: 768px) {
-  .staff__img {
+@media screen and (min-width: 678px) {
+  .staff__thumb {
     width: 354px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .staff__img {
+  .staff__thumb {
     width: 270px;
   }
+}
+
+.staff__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: auto;
 }
 
 .staff__description {

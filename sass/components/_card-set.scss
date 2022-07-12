@@ -38,22 +38,26 @@
   }
 }
 
-.staff__img {
+.staff__thumb {
   @media screen and (max-width: 479px) {
-    max-width: 100%;
+    width: 100%;
   }
 
   @media screen and (min-width: 480px) {
     width: 450px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 678px) {
     width: 354px;
   }
 
   @media screen and (min-width: 1200px) {
     width: 270px;
   }
+}
+
+.staff__img {
+  object-fit: cover;
   height: auto;
 }
 
