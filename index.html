@@ -16,6 +16,14 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/main.min.css" />
+
+    <head>
+      <script>
+        // Picture element HTML5 shiv
+        document.createElement('picture');
+      </script>
+      <script src="picturefill.js" async></script>
+    </head>
   </head>
 
   <body class="" body>
@@ -177,7 +185,8 @@
           <ul class="department__list">
             <li class="department__item">
               <img
-                src="./images/main-about-us-1.jpg"
+                srcset="./images/main-about-us-1.jpeg 1x, ./images/main-about-us-1-@2.jpeg 2x"
+                src="./images/main-about-us-1.jpeg"
                 alt="Разработка десктопных приложений"
                 width="370"
                 height="294"
@@ -187,7 +196,8 @@
 
             <li class="department__item">
               <img
-                src="./images/main-about-us-2.jpg"
+                srcset="./images/main-about-us-2.jpeg 1x, ./images/main-about-us-2-@2.jpeg 2x"
+                src="./images/main-about-us-2.jpeg"
                 alt="Разработка мобильных приложений"
                 width="370"
                 height="294"
@@ -197,7 +207,8 @@
 
             <li class="department__item">
               <img
-                src="./images/main-about-us-3.jpg"
+                srcset="./images/main-about-us-3.jpeg 1x, ./images/main-about-us-3-@2.jpeg 2x"
+                src="./images/main-about-us-3.jpeg"
                 alt="Разработка дизайнерских решений"
                 width="370"
                 height="294"
@@ -215,19 +226,48 @@
           <ul class="staff__card-set">
             <li class="staff__card">
               <div class="staff__thumb">
-                <img
-                  class="staff__img"
-                  srcset="
-                    ./images/designer-450.jpeg   450w,
-                    ./images/designer-676.jpeg   676w,
-                    ./images/designer-900.jpeg   900w,
-                    ./images/designer-1350.jpeg 1350w
-                  "
-                  sizes="(max-width: 767px) 450px, (max-width: 1199px) 354px, 270px"
-                  src="./images/designer-450.jpeg"
-                  alt="Игорь Демьяненко"
-                />
+                <picture>
+                  <source
+                    srcset="./images/designer-270.webp 1x, ./images/designer-540.webp 2x"
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/designer-270.jpeg 1x, ./images/designer-540.jpeg 2x"
+                    media="(min-width: 1200px)"
+                    type="image/jpeg"
+                  />
+
+                  <source
+                    srcset="./images/designer-354.webp 1x, ./images/designer-708.webp 2x"
+                    media="(min-width: 768px) and (max-width: 1199px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/designer-354.jpeg 1x, ./images/designer-708.jpeg 2x"
+                    media="(min-width: 768px) and (max-width: 1199px)"
+                    type="image/jpeg"
+                  />
+
+                  <source
+                    srcset="./images/designer-450.webp 1x, ./images/designer-900.webp 2x"
+                    media="(max-width: 767px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/designer-450.jpeg 1x, ./images/designer-900.jpeg 2x"
+                    media="(max-width: 767px)"
+                    type="image/jpeg"
+                  />
+
+                  <img
+                    srcset="./images/designer-450.jpeg 450w, ./images/designer-900.jpeg 900w"
+                    src="./images/designer-450.jpeg"
+                    alt="Игорь Демьяненко"
+                  />
+                </picture>
               </div>
+
               <div class="staff__description">
                 <h3 class="staff__name">Игорь Демьяненко</h3>
                 <p class="staff__position" lang="en">Product Designer</p>
@@ -265,19 +305,49 @@
             </li>
 
             <li class="staff__card">
-              <div class="staff__thumb"></div>
-              <img
-                class="staff__img"
-                srcset="
-                  ./images/developer-450.jpeg   450w,
-                  ./images/developer-676.jpeg   676w,
-                  ./images/developer-900.jpeg   900w,
-                  ./images/developer-1350.jpeg 1350w
-                "
-                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
-                src="./images/developer-450.jpeg"
-                alt="Ольга Репина"
-              />
+              <div class="staff__thumb">
+                <picture>
+                  <source
+                    srcset="./images/developer-270.webp 1x, ./images/developer-540.webp 2x"
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/developer-270.jpeg 1x, ./images/developer-540.jpeg 2x"
+                    media="(min-width: 1200px)"
+                    type="image/jpeg"
+                  />
+
+                  <source
+                    srcset="./images/developer-354.webp 1x, ./images/developer-708.webp 2x"
+                    media="(min-width: 768px) and (max-width: 1199px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/developer-354.jpeg 1x, ./images/developer-708.jpeg 2x"
+                    media="(min-width: 768px) and (max-width: 1199px)"
+                    type="image/jpeg"
+                  />
+
+                  <source
+                    srcset="./images/developer-450.webp 1x, ./images/developer-900.webp 2x"
+                    media="(max-width: 767px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/developer-450.jpeg 1x, ./images/developer-900.jpeg 2x"
+                    media="(max-width: 767px)"
+                    type="image/jpeg"
+                  />
+
+                  <img
+                    srcset="./images/developer-450.jpeg 450w, ./images/developer-900.jpeg 900w"
+                    src="./images/developer-450.jpeg"
+                    alt="Ольга Репина"
+                  />
+                </picture>
+              </div>
+
               <div class="staff__description">
                 <h3 class="staff__name">Ольга Репина</h3>
                 <p class="staff__position" lang="en">Frontend Developer</p>
@@ -316,18 +386,46 @@
 
             <li class="staff__card">
               <div class="staff__thumb">
-                <img
-                  class="staff__img"
-                  srcset="
-                    ./images/marketolog-450.jpeg   450w,
-                    ./images/marketolog-676.jpeg   676w,
-                    ./images/marketolog-900.jpeg   900w,
-                    ./images/marketolog-1350.jpeg 1350w
-                  "
-                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
-                  src="./images/marketolog-450.jpeg"
-                  alt="Николай Тарасов"
-                />
+                <picture>
+                  <source
+                    srcset="./images/marketolog-270.webp 1x, ./images/marketolog-540.webp 2x"
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/marketolog-270.jpeg 1x, ./images/marketolog-540.jpeg 2x"
+                    media="(min-width: 1200px)"
+                    type="image/jpeg"
+                  />
+
+                  <source
+                    srcset="./images/marketolog-354.webp 1x, ./images/marketolog-708.webp 2x"
+                    media="(min-width: 768px) and (max-width: 1199px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/marketolog-354.jpeg 1x, ./images/marketolog-708.jpeg 2x"
+                    media="(min-width: 768px) and (max-width: 1199px)"
+                    type="image/jpeg"
+                  />
+
+                  <source
+                    srcset="./images/marketolog-450.webp 1x, ./images/marketolog-900.webp 2x"
+                    media="(max-width: 767px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/marketolog-450.jpeg 1x, ./images/marketolog-900.jpeg 2x"
+                    media="(max-width: 767px)"
+                    type="image/jpeg"
+                  />
+
+                  <img
+                    srcset="./images/marketolog-450.jpeg 450w, ./images/marketolog-900.jpeg 900w"
+                    src="./images/marketolog-450.jpeg"
+                    alt="Николай Тарасов"
+                  />
+                </picture>
               </div>
               <div class="staff__description">
                 <h3 class="staff__name">Николай Тарасов</h3>
@@ -366,19 +464,49 @@
             </li>
 
             <li class="staff__card">
-              <div class="staff__thumb"></div>
-              <img
-                class="staff__img"
-                srcset="
-                  ./images/uidesigner-450.jpeg   450w,
-                  ./images/uidesigner-676.jpeg   676w,
-                  ./images/uidesigner-900.jpeg   900w,
-                  ./images/uidesigner-1350.jpeg 1350w
-                "
-                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
-                src="./images/uidesigner-450.jpeg"
-                alt="Михаил Ермаков"
-              />
+              <div class="staff__thumb">
+                <picture>
+                  <source
+                    srcset="./images/uidesigner-270.webp 1x, ./images/uidesigner-540.webp 2x"
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/uidesigner-270.jpeg 1x, ./images/uidesigner-540.jpeg 2x"
+                    media="(min-width: 1200px)"
+                    type="image/jpeg"
+                  />
+
+                  <source
+                    srcset="./images/uidesigner-354.webp 1x, ./images/uidesigner-708.webp 2x"
+                    media="(min-width: 768px) and (max-width: 1199px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/uidesigner-354.jpeg 1x, ./images/uidesigner-708.jpeg 2x"
+                    media="(min-width: 768px) and (max-width: 1199px)"
+                    type="image/jpeg"
+                  />
+
+                  <source
+                    srcset="./images/uidesigner-450.webp 1x, ./images/uidesigner-900.webp 2x"
+                    media="(max-width: 767px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./images/uidesigner-450.jpeg 1x, ./images/uidesigner-900.jpeg 2x"
+                    media="(max-width: 767px)"
+                    type="image/jpeg"
+                  />
+
+                  <img
+                    srcset="./images/uidesigner-450.jpeg 450w, ./images/uidesigner-900.jpeg 900w"
+                    src="./images/uidesigner-450.jpeg"
+                    alt="Михаил Ермаков"
+                  />
+                </picture>
+              </div>
+
               <div class="staff__description">
                 <h3 class="staff__name">Михаил Ермаков</h3>
                 <p class="staff__position" lang="en">UI Designer</p>

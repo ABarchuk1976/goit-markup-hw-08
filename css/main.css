@@ -1443,12 +1443,6 @@ button {
   }
 }
 
-.staff__img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: auto;
-}
-
 .staff__description {
   background-color: var(--bg-card-staff);
   padding-top: 30px;
