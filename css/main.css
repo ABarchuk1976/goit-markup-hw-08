@@ -482,6 +482,7 @@ button {
     top: 0;
     left: 0;
     width: calc(100vw);
+    height: calc(100vh);
     z-index: 1;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -524,7 +525,7 @@ button {
 
 @media screen and (max-width: 767px) {
   .container__contact {
-    margin-top: 306px;
+    margin-top: auto;
     margin-bottom: 64px;
   }
 }
@@ -1248,7 +1249,7 @@ button {
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .achievement__item + .achievement__item {
     margin-top: var(--gap-v);
   }

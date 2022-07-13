@@ -78,6 +78,7 @@
     top: 0;
     left: 0;
     width: calc(100vw);
+    height: calc(100vh);
     z-index: 1;
 
     @include positioning-flex(flex, start, flex-start);
@@ -98,7 +99,7 @@
 
 .container__contact {
   @media screen and (max-width: 767px) {
-    margin-top: 306px;
+    margin-top: auto;
     margin-bottom: 64px;
   }
   @media screen and (min-width: 768px) {
