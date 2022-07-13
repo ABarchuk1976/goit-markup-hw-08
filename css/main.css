@@ -1677,7 +1677,12 @@ button {
 }
 
 .portfolio-img {
+  height: 294px;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .portfolio__thumb-overlay {
