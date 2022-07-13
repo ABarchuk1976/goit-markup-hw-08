@@ -10,7 +10,7 @@
 
 .menu__button {
   display: none;
-  z-index: 2;
+  z-index: 0;
   @media screen and (max-width: 767px) {
     position: absolute;
     top: 50%;
@@ -26,6 +26,9 @@
     border: none;
     color: var(--color-icon-menu-mobile);
     cursor: pointer;
+  }
+  &.is-open {
+    z-index: 2;
   }
 
   &:hover,
@@ -43,7 +46,7 @@
   transition: opacity var(--duration-primary) var(--timing-primary);
 
   .menu__button.is-open & {
-    opacity: 1;
+    opacity: 2;
   }
 }
 

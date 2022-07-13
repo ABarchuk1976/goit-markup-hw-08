@@ -391,7 +391,7 @@ button {
 
 .menu__button {
   display: none;
-  z-index: 2;
+  z-index: 0;
 }
 
 @media screen and (max-width: 767px) {
@@ -422,6 +422,10 @@ button {
   }
 }
 
+.menu__button.is-open {
+  z-index: 2;
+}
+
 .menu__button:hover, .menu__button:focus {
   color: var(--color-accent);
 }
@@ -437,7 +441,7 @@ button {
 }
 
 .menu__button.is-open .menu__icon-close {
-  opacity: 1;
+  opacity: 2;
 }
 
 .menu__icon-menu {
@@ -943,6 +947,7 @@ button {
   left: 0;
   width: 100%;
   min-height: 100%;
+  z-index: 10;
   background-color: var(--bg-backdrop);
   visibility: visible;
   -webkit-transition: visibility var(--duration-primary) var(--timing-primary);
@@ -963,7 +968,7 @@ button {
   border-radius: var(--radius-board-primary);
   -webkit-box-shadow: var(--shadow-modal);
           box-shadow: var(--shadow-modal);
-  z-index: 10;
+  z-index: 20;
 }
 
 .modal__close-btn {
@@ -988,7 +993,7 @@ button {
   border-radius: 50%;
   cursor: pointer;
   background-color: transparent;
-  z-index: 10;
+  z-index: 20;
   -webkit-transition: color var(--duration-primary) var(--timing-primary);
   transition: color var(--duration-primary) var(--timing-primary);
 }
@@ -1010,7 +1015,7 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: 10;
+  z-index: 20;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
   opacity: 1;
