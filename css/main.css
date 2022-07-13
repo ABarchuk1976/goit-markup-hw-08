@@ -963,6 +963,7 @@ button {
   border-radius: var(--radius-board-primary);
   -webkit-box-shadow: var(--shadow-modal);
           box-shadow: var(--shadow-modal);
+  z-index: 10;
 }
 
 .modal__close-btn {
@@ -987,6 +988,7 @@ button {
   border-radius: 50%;
   cursor: pointer;
   background-color: transparent;
+  z-index: 10;
   -webkit-transition: color var(--duration-primary) var(--timing-primary);
   transition: color var(--duration-primary) var(--timing-primary);
 }
