@@ -1434,7 +1434,7 @@ button {
   }
 }
 
-@media screen and (min-width: 678px) {
+@media screen and (min-width: 768px) {
   .staff__thumb {
     width: 354px;
   }
