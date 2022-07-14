@@ -1,15 +1,43 @@
 .social-string {
   display: none;
-  @media screen and (max-width: 767px) {
-    @include positioning-flex($jc: start);
+  @media screen and (min-width: 280px) and (max-width: 767px) {
+    @include positioning-flex(inline-flex, start);
+    flex-wrap: wrap;
     margin-left: -10px;
-    max-width: 100%;
+    top: -10px;
+  }
+}
+.social-string__item {
+  margin-top: 10px;
+  & + & {
+    border-left: 1px solid var(--color-board-input-modal);
   }
 }
 
-.social-string__item + .social-string__item {
-  border-left: 1px solid var(--color-board-input-modal);
+.social-string__item:last-child {
+  @media screen and (min-width: 358px) and (max-width: 449px) {
+    border-left: none;
+  }
 }
+
+.social-string__item:nth-child(3) {
+  @media screen and (min-width: 280px) and (max-width: 356px) {
+    border-left: none;
+  }
+  @media screen and (min-width: 357px) and (max-width: 449px) {
+    border-left: 1px solid var(--color-board-input-modal);
+  }
+}
+
+// .social-string__item:nth-child(3) {
+//   @media screen (min-width: 358px) and (max-width: 449px) {
+//     border-right: none;
+//   }
+// }
+
+// .social-string__item + .social-string__item {
+//   border-left: 1px solid var(--color-board-input-modal);
+// }
 
 .social-string__link {
   display: inline-block;
