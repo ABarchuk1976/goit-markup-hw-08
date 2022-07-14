@@ -867,6 +867,7 @@ button {
         -ms-flex-align: center;
             align-items: center;
     margin-left: -10px;
+    max-width: 100%;
   }
 }
 

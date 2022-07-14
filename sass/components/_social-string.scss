@@ -3,6 +3,7 @@
   @media screen and (max-width: 767px) {
     @include positioning-flex($jc: start);
     margin-left: -10px;
+    max-width: 100%;
   }
 }
 
