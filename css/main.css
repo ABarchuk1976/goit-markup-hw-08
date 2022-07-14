@@ -1737,7 +1737,14 @@ button {
 }
 
 .portfolio__card-link {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
   text-decoration: none;
   color: inherit;
   -webkit-transition: -webkit-box-shadow var(--duration-primary) var(--timing-primary);
@@ -1803,6 +1810,9 @@ button {
   border: 1px solid var(--color-board-card);
   border-top: none;
   padding: 20px 24px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .portfolio__card-title {
