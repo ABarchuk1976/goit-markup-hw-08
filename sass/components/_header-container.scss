@@ -10,7 +10,6 @@
 
 .menu__button {
   display: none;
-  z-index: 0;
   @media screen and (max-width: 767px) {
     position: absolute;
     top: 50%;
@@ -27,8 +26,74 @@
     color: var(--color-icon-menu-mobile);
     cursor: pointer;
   }
-  &.is-open {
+
+  &:hover,
+  &:focus {
+    color: var(--color-accent);
+  }
+}
+
+.menu__icon-menu {
+  display: block;
+  width: 24px;
+  height: 16px;
+  opacity: 1;
+  fill: currentColor;
+  transition: opacity var(--duration-primary) var(--timing-primary);
+}
+
+.menu__container {
+  @media screen and (min-width: 768px) {
+    @include positioning-flex($jc: start);
+    text-align: left;
+    height: 100%;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 480px;
+    height: 100%;
+    padding: 48px 40px;
+    box-shadow: var(--shadow-menu-mobile);
+    z-index: 0;
+  }
+}
+
+.menu__container.is-open {
+  @media screen and (max-width: 767px) {
     z-index: 2;
+    display: block;
+    @include positioning-flex(flex, start, flex-start);
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 768px) {
+    @include positioning-flex($jc: start);
+    text-align: left;
+  }
+}
+
+.menu__button-close {
+  display: none;
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    @include positioning-flex();
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    color: var(--color-icon-menu-mobile);
+    cursor: pointer;
+    z-index: 3;
   }
 
   &:hover,
@@ -45,54 +110,8 @@
   fill: currentColor;
   transition: opacity var(--duration-primary) var(--timing-primary);
 
-  .menu__button.is-open & {
-    opacity: 2;
-  }
-}
-
-.menu__icon-menu {
-  display: block;
-  width: 24px;
-  height: 16px;
-  opacity: 1;
-  fill: currentColor;
-  transition: opacity var(--duration-primary) var(--timing-primary);
-
-  .menu__button.is-open & {
-    opacity: 0;
-  }
-}
-
-.menu__container {
-  @media screen and (min-width: 768px) {
-    @include positioning-flex($jc: start);
-    text-align: left;
-    height: 100%;
-  }
-
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-}
-
-.menu__container.is-open {
-  @media screen and (max-width: 767px) {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: calc(100vw);
-    height: calc(100vh);
-    z-index: 1;
-
-    @include positioning-flex(flex, start, flex-start);
-    flex-direction: column;
-    background-color: var(--bg-menu-mobile);
-    box-shadow: var(--shadow-menu-mobile);
-    padding: var(--padding-menu-mobile);
-  }
-  @media screen and (min-width: 768px) {
-    @include positioning-flex($jc: start);
-    text-align: left;
+  .menu__button-close.is-open & {
+    opacity: 1;
   }
 }
 

@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   width: 100%;
   max-width: 1600px;
   margin-left: auto;
@@ -10,5 +11,17 @@
   @media screen and (max-width: 767px) {
     padding-top: 16px;
     padding-bottom: 16px;
+  }
+}
+
+.menu__backdrop.is-open {
+  @media screen and (max-width: 767px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bg-menu-mobile);
+    z-index: 1;
   }
 }

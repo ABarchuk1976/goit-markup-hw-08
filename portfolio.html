@@ -33,64 +33,76 @@
           data-menu-button
         >
           <svg aria-label="Переключатель мобильного меню">
-            <use class="menu__icon-close" href="./images/icons.svg#icon-menu-close"></use>
             <use class="menu__icon-menu" href="./images/icons.svg#icon-menu"></use>
           </svg>
         </button>
 
-        <div class="menu__container" id="menu-container" data-menu>
-          <nav class="navigation">
-            <ul class="navigation__list">
-              <li class="navigation__item">
-                <a href="./index.html" class="navigation__link">Студия</a>
+        <div class="menu__backdrop" data-menu-backdrop>
+          <div class="menu__container" id="menu-container" data-menu>
+            <button
+              class="menu__button-close"
+              type="button"
+              aria-expanded="false"
+              aria-controls="menu-container"
+              data-menu-button-close
+            >
+              <svg aria-label="Переключатель мобильного меню">
+                <use class="menu__icon-close" href="./images/icons.svg#icon-menu-close"></use>
+              </svg>
+            </button>
+            <nav class="navigation">
+              <ul class="navigation__list">
+                <li class="navigation__item">
+                  <a href="./index.html" class="navigation__link">Студия</a>
+                </li>
+
+                <li class="navigation__item">
+                  <a href="./portfolio.html" class="navigation__link navigation__link--current"
+                    >Портфолио</a
+                  >
+                </li>
+
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+
+            <ul class="contact__list container__contact">
+              <li class="contact__item">
+                <a href="mailto:info@devstudio.com" class="contact__link">
+                  <svg class="contact__icon contact__icon--prepend" width="16" height="12">
+                    <use href="./images/icons.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
               </li>
 
-              <li class="navigation__item">
-                <a href="./portfolio.html" class="navigation__link navigation__link--current"
-                  >Портфолио</a
-                >
-              </li>
-
-              <li class="navigation__item">
-                <a href="#" class="navigation__link">Контакты</a>
+              <li class="contact__item">
+                <a href="tel:+380961111111" class="contact__link contact__link--accent">
+                  <svg class="contact__icon contact__icon--prepend" width="10" height="16">
+                    <use href="./images/icons.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
               </li>
             </ul>
-          </nav>
 
-          <ul class="contact__list container__contact">
-            <li class="contact__item">
-              <a href="mailto:info@devstudio.com" class="contact__link">
-                <svg class="contact__icon contact__icon--prepend" width="16" height="12">
-                  <use href="./images/icons.svg#icon-envelope"></use>
-                </svg>
-                info@devstudio.com
-              </a>
-            </li>
-
-            <li class="contact__item">
-              <a href="tel:+380961111111" class="contact__link contact__link--accent">
-                <svg class="contact__icon contact__icon--prepend" width="10" height="16">
-                  <use href="./images/icons.svg#icon-smartphone"></use>
-                </svg>
-                +38 096 111 11 11
-              </a>
-            </li>
-          </ul>
-
-          <ul class="social-string">
-            <li class="social-string__item">
-              <a href="#" class="social-string__link">Instagram</a>
-            </li>
-            <li class="social-string__item">
-              <a href="#" class="social-string__link">Twitter</a>
-            </li>
-            <li class="social-string__item">
-              <a href="#" class="social-string__link">Facebook</a>
-            </li>
-            <li class="social-string__item">
-              <a href="#" class="social-string__link">LinkedIn</a>
-            </li>
-          </ul>
+            <ul class="social-string">
+              <li class="social-string__item">
+                <a href="#" class="social-string__link">Instagram</a>
+              </li>
+              <li class="social-string__item">
+                <a href="#" class="social-string__link">Twitter</a>
+              </li>
+              <li class="social-string__item">
+                <a href="#" class="social-string__link">Facebook</a>
+              </li>
+              <li class="social-string__item">
+                <a href="#" class="social-string__link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
